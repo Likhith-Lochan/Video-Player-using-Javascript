@@ -1,12 +1,13 @@
 const connectDB =require("./db/index.js")
 const mongoose = require("mongoose");
 const { DB_NAME } = require("./constants.js");
+import {app} from "./app.js"
 
-express=require("express")
+// express=require("express")
 dotenv=require("dotenv").config()
 
 
-app=express()
+// app=express()
 
 app.get('/',(req,res)=>{
     res.send("Hello")
@@ -17,6 +18,8 @@ connectDB()
 app.listen(process.env.PORT,()=>{
     console.log(`server listening on port ${process.env.PORT}`)
 })
+
+
 // ;(async()=>{
 //     try {
        
